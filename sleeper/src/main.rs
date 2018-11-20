@@ -1,4 +1,4 @@
-#[cfg(feature = "gpio")]
+#[cfg(target = "armv7-unknown-linux-gnueabihf")]
 extern crate rppal;
 
 mod gpio;

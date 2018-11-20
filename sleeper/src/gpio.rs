@@ -1,20 +1,19 @@
-#[cfg(target = "arm-unknown-linux-gnueabihf")]
+#[cfg(target = "armv7-unknown-linux-gnueabihf")]
 use core::time::Duration;
-#[cfg(target = "arm-unknown-linux-gnueabihf")]
+#[cfg(target = "armv7-unknown-linux-gnueabihf")]
 use rppal::pwm::*;
-#[cfg(target = "arm-unknown-linux-gnueabihf")]
+#[cfg(target = "armv7-unknown-linux-gnueabihf")]
 use std::thread::sleep;
 
-#[cfg(not(target = "arm-unknown-linux-gnueabihf"))]
+#[cfg(not(target = "armv7-unknown-linux-gnueabihf"))]
 pub fn print_hello() {
-    println!("No PWM available unless you are on a Raspberry Pi");
+    println!("Not a Raspberry Pi");
 }
 
-#[cfg(target = "arm-unknown-linux-gnueabihf")]
+#[cfg(target = "armv7-unknown-linux-gnueabihf")]
 pub fn print_hello() {
-    println!("Hello, PWM!");
+    println!("Hello, Pi!");
 
-    if cfg!(target = "arm-unknown-linux-gnueabihf") {
         let period = Duration::from_micros(10000);
         let duty_cycle = Duration::from_micros(10000);
 
@@ -37,5 +36,4 @@ pub fn print_hello() {
             println!("{} micros", d);
             sleep(Duration::from_millis(delay2));
         }
-    }
 }

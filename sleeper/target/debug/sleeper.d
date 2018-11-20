@@ -1,1 +1,1 @@
-C:\Users\pauli\github\sleeper\sleeper\target\debug\sleeper.pdb: C:\Users\pauli\github\sleeper\sleeper\src\gpio.rs C:\Users\pauli\github\sleeper\sleeper\src\main.rs
+/home/pi/github/sleeper/sleeper/target/debug/sleeper: /home/pi/github/sleeper/sleeper/src/gpio.rs /home/pi/github/sleeper/sleeper/src/main.rs
