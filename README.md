@@ -3,7 +3,7 @@ Autonomous drift car experiment
 
 1. Visit http://rustup.rs 
 
-2. On Raspberry Pi: 
+2. On Raspberry Pi, PWM hardware is usually for audio out. Some reconfig (and don't use audio at the same time..): 
 
 Instructions at https://docs.golemparts.com/rppal/0.9.0/rppal/spi/index.html which are, briefly:
 A. Add dtoverlay=pwm-2chan to /boot/config.txt
@@ -19,6 +19,7 @@ SUBSYSTEM=="pwm*", PROGRAM="/bin/sh -c '\
 
 4. pip3 install tensorflow
 
-WIP 5. You can run on a PC without PWM hardware since the "gpio" feature is off by default. On a Pi, use
-    cargo run --feature "gpio" --release
-
+5. (WIP Untested) From Linux you can cross-compile to Raspberry Pi if you:
+    rustup target add armv7-unknown-linux-gnueabihf
+    sudo apt-get install gcc-4.7-multilib-arm-linux-gnueabihf
+    cargo build --target=armv7-unknown-linux-gnueabihf
