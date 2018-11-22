@@ -23,3 +23,5 @@ SUBSYSTEM=="pwm*", PROGRAM="/bin/sh -c '\
     rustup target add armv7-unknown-linux-gnueabihf
     sudo apt-get install gcc-4.7-multilib-arm-linux-gnueabihf
     cargo build --target=armv7-unknown-linux-gnueabihf
+
+6. If audio recording is needed, a USB mic can be setup up according to http://www.g7smy.co.uk/2013/08/recording-sound-on-the-raspberry-pi/ 
