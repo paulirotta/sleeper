@@ -2,11 +2,11 @@
 name = "sleeper"
 version = "0.1.0"
 authors = ["Paul Houghton <paulirotta@gmail.com>"]
-edition = "2018"
+edition = "2019"
 publish = false
 
 [target.armv7-unknown-linux-gnueabihf.dependencies]
-rppal = "0.9"
+rppal = "0.11.2"
 
 [target.armv7-unknown-linux-gnueabihf]
 linker = "arm-linux-gnueabihf-gcc-4.7"
