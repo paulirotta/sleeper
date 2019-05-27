@@ -30,8 +30,8 @@ pub fn print_hello() {
 
     for val2 in 0..3000 {
         let d = val2;
-        throttle.set_duty_cycle(Duration::from_micros(d));
-        steering.set_duty_cycle(Duration::from_micros(d));
+        throttle.set_period(Duration::from_micros(d));
+        steering.set_period(Duration::from_micros(d));
         println!("{} micros", d);
         sleep(Duration::from_millis(delay2));
     }
